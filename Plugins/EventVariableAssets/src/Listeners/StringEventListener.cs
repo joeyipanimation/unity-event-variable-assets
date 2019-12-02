@@ -30,17 +30,20 @@ namespace EventVariableAssets
             else
                 Debug.LogError("Cannot cast event value to string. Event type must be one of default types (string, bool, int, float) for type-casting to work.", this);
 
-            if (StringFormat != null)
-            {
-                Response.Invoke(string.Format(StringFormat.Value, eventValue));
-            }
-            else if (string.IsNullOrEmpty(StringFormat.Value))
+            if (StringFormat == null)
             {
                 Response.Invoke(eventValue);
             }
             else
             {
-                Response.Invoke(eventValue);
+                if (string.IsNullOrEmpty(StringFormat.Value))
+                {
+                    Response.Invoke(eventValue);
+                }
+                else
+                {
+                    Response.Invoke(string.Format(StringFormat.Value, eventValue));
+                }
             }
         }
     }
