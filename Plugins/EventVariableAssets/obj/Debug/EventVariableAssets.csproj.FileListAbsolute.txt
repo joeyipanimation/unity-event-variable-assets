@@ -1,9 +1,0 @@
-E:\Documents\Dropbox_ictyip\Dropbox\EventVariableAssets\EventVariableAssets\bin\Build\EventVariableAssets.dll
-E:\Documents\Dropbox_ictyip\Dropbox\EventVariableAssets\EventVariableAssets\bin\Build\EventVariableAssets.pdb
-E:\Documents\Dropbox_ictyip\Dropbox\EventVariableAssets\EventVariableAssets\bin\Build\UnityEngine.dll
-E:\Documents\Dropbox_ictyip\Dropbox\EventVariableAssets\EventVariableAssets\bin\Build\UnityEngine.xml
-E:\Documents\Dropbox_ictyip\Dropbox\EventVariableAssets\EventVariableAssets\obj\Debug\EventVariableAssets.dll
-E:\Documents\Dropbox_ictyip\Dropbox\EventVariableAssets\EventVariableAssets\obj\Debug\EventVariableAssets.pdb
-E:\Documents\Dropbox_ictyip\Dropbox\EventVariableAssets\EventVariableAssets\obj\Debug\EventVariableAssets.csprojAssemblyReference.cache
-E:\Documents\Dropbox_ictyip\Dropbox\EventVariableAssets\EventVariableAssets\obj\Debug\EventVariableAssets.csproj.CoreCompileInputs.cache
-E:\Documents\Dropbox_ictyip\Dropbox\EventVariableAssets\EventVariableAssets\obj\Debug\EventVariableAssets.csproj.CopyComplete
