@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 
+guid: e2934058d8eef45808ec3a40d008aa50
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -41,7 +41,7 @@ PluginImporter:
   isOverridable: 0
   platformData:
   - first:
-      Any: 
+      Any:
     second:
       enabled: 1
       settings: {}
@@ -57,6 +57,6 @@ PluginImporter:
       enabled: 0
       settings:
         CPU: AnyCPU
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  userData:
+  assetBundleName:
+  assetBundleVariant:
