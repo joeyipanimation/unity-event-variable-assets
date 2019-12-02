@@ -10,6 +10,8 @@ PluginImporter:
       type: 3}
     EventVariableAssets.GenericEventData: {fileID: 2800000, guid: 4dbfe16d2cdfedd479a475cdca30fa15,
       type: 3}
+    EventVariableAssets.GenericEventData_StringFormat: {fileID: 2800000, guid: 4dbfe16d2cdfedd479a475cdca30fa15,
+      type: 3}
     EventVariableAssets.GenericEventListener: {fileID: 2800000, guid: 742bdd72aa809fd46b33310600483f0d,
       type: 3}
     EventVariableAssets.BoolEvent: {fileID: 2800000, guid: e567ff88829f32642a8598073fe0d8bf,

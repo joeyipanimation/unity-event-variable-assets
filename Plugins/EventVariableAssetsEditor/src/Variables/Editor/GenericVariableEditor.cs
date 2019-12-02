@@ -13,18 +13,19 @@ namespace EventVariableAssets
         {
             base.OnInspectorGUI();
             GenericVariable cmp = (GenericVariable)target;
-            //Type baseType = GenericVariable.GetBaseType(cmp);
 
-            ////Draw value field
-            //if      (baseType == typeof(float))     EditorGUILayout.FloatField("Value", (float)cmp.Value);
-            //else if (baseType == typeof(int))       EditorGUILayout.IntField("Value", (int)cmp.Value);
-            //else if (baseType == typeof(string))    EditorGUILayout.TextField("Value", (string)cmp.Value);
-            //else if (baseType == typeof(bool))      EditorGUILayout.Toggle("Value", (bool)cmp.Value);
-            //else                                    base.OnInspectorGUI();
+            //Draw value field
+            Type baseType = GenericVariable.GetBaseType(cmp);
+            if      (baseType == typeof(float))     cmp.Value = EditorGUILayout.FloatField("Value", (float)cmp.Value);
+            else if (baseType == typeof(int))       cmp.Value = EditorGUILayout.IntField("Value", (int)cmp.Value);
+            else if (baseType == typeof(string))    cmp.Value = EditorGUILayout.TextField("Value", (string)cmp.Value);
+            else if (baseType == typeof(bool))      cmp.Value = EditorGUILayout.Toggle("Value", (bool)cmp.Value);
+            else                                    base.OnInspectorGUI();
 
             GUI.enabled = false;
             EditorGUILayout.Toggle("Has Changed", cmp.HasChanged);
             GUI.enabled = true;
         }
-    }
+
+	}
 }

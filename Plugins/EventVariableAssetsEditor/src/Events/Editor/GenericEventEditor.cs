@@ -17,6 +17,16 @@ namespace EventVariableAssets
                 cmp.Raise();
             }
             GUI.enabled = true;
+
+            GUILayout.Space(20);
+            cmp.TraceCallStack = EditorGUILayout.Toggle("Trace Call Stack", cmp.TraceCallStack);
+            EditorGUILayout.TextArea(cmp.CallStackStrings);
+        }
+
+        public override bool RequiresConstantRepaint()
+        {
+            GenericEvent cmp = (GenericEvent)target;
+            return cmp.TraceCallStack;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
-    <ReleaseVersion>0.2</ReleaseVersion>
+    <ReleaseVersion>0.3</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,6 +67,7 @@
     <Compile Include="src\Variables\IntVariableReference.cs" />
     <Compile Include="src\Variables\StringVariable.cs" />
     <Compile Include="src\Variables\StringVariableReference.cs" />
+    <Compile Include="src\Events\GenericEventData_StringFormat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\EventVariableAssets.dll.meta" />
@@ -107,13 +108,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)bin\Plugins\$(ProjectName)\$(ProjectName).dll"
-XCOPY /S /Y "$(SolutionDir)resources\*" "$(SolutionDir)bin\Plugins\$(ProjectName)\"</PostBuildEvent>
+    <PostBuildEvent></PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>if exist "$(SolutionDir)bin\Plugins\" RD /S /Q "$(SolutionDir)bin\Plugins\"
-if not exist "$(SolutionDir)bin\Plugins\" mkdir "$(SolutionDir)bin\Plugins\"
-if not exist "$(SolutionDir)bin\Plugins\$(SolutionName)\" mkdir "$(SolutionDir)bin\Plugins\$(SolutionName)\"</PreBuildEvent>
+    <PreBuildEvent></PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
