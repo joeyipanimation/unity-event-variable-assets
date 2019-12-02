@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F92A6B30-F373-4A57-91C8-2B48B2A6C5EC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EventVariableAssets</RootNamespace>
+    <AssemblyName>EventVariableAssets</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\Projects\VRN\virtualresearchnavigator\trunk\core\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Events\BoolEvent.cs" />
+    <Compile Include="src\Events\ComponentProperty.cs" />
+    <Compile Include="src\Events\FloatEvent.cs" />
+    <Compile Include="src\Events\GenericEvent.cs" />
+    <Compile Include="src\Events\GenericEventData.cs" />
+    <Compile Include="src\Listeners\BoolEventListener.cs" />
+    <Compile Include="src\Listeners\FloatEventListener.cs" />
+    <Compile Include="src\Listeners\GenericEventListener.cs" />
+    <Compile Include="src\Events\GenericParamEvent.cs" />
+    <Compile Include="src\Listeners\GenericEventListenerBase.cs" />
+    <Compile Include="src\Listeners\GenericParamEventListener.cs" />
+    <Compile Include="src\Events\IntEvent.cs" />
+    <Compile Include="src\Events\StringEvent.cs" />
+    <Compile Include="src\Listeners\IntEventListener.cs" />
+    <Compile Include="src\Listeners\StringEventListener.cs" />
+    <Compile Include="src\Variables\BoolVariable.cs" />
+    <Compile Include="src\Variables\BoolVariableReference.cs" />
+    <Compile Include="src\Variables\FloatVariable.cs" />
+    <Compile Include="src\Variables\FloatVariableReference.cs" />
+    <Compile Include="src\Variables\GenericVariable.cs" />
+    <Compile Include="src\Variables\GenericVariableReference.cs" />
+    <Compile Include="src\Variables\IntVariable.cs" />
+    <Compile Include="src\Variables\IntVariableReference.cs" />
+    <Compile Include="src\Variables\StringVariable.cs" />
+    <Compile Include="src\Variables\StringVariableReference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\EventVariableAssets.dll.meta" />
+    <None Include="resources\Gizmos\BoolEvent Icon.png.meta" />
+    <None Include="resources\Gizmos\BoolEventListener Icon.png.meta" />
+    <None Include="resources\Gizmos\BoolVariable Icon.png.meta" />
+    <None Include="resources\Gizmos\FloatEvent Icon.png.meta" />
+    <None Include="resources\Gizmos\FloatEventListener Icon.png.meta" />
+    <None Include="resources\Gizmos\FloatVariable Icon.png.meta" />
+    <None Include="resources\Gizmos\GenericEvent Icon.png.meta" />
+    <None Include="resources\Gizmos\GenericEventData Icon.png.meta" />
+    <None Include="resources\Gizmos\GenericEventListener Icon.png.meta" />
+    <None Include="resources\Gizmos\GenericVariable Icon.png.meta" />
+    <None Include="resources\Gizmos\IntEvent Icon.png.meta" />
+    <None Include="resources\Gizmos\IntEventListener Icon.png.meta" />
+    <None Include="resources\Gizmos\IntVariable Icon.png.meta" />
+    <None Include="resources\Gizmos\StringEvent Icon.png.meta" />
+    <None Include="resources\Gizmos\StringEventListener Icon.png.meta" />
+    <None Include="resources\Gizmos\StringVariable Icon.png.meta" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\Gizmos\BoolEvent Icon.png" />
+    <Content Include="resources\Gizmos\BoolEventListener Icon.png" />
+    <Content Include="resources\Gizmos\BoolVariable Icon.png" />
+    <Content Include="resources\Gizmos\FloatEvent Icon.png" />
+    <Content Include="resources\Gizmos\FloatEventListener Icon.png" />
+    <Content Include="resources\Gizmos\FloatVariable Icon.png" />
+    <Content Include="resources\Gizmos\GenericEvent Icon.png" />
+    <Content Include="resources\Gizmos\GenericEventData Icon.png" />
+    <Content Include="resources\Gizmos\GenericEventListener Icon.png" />
+    <Content Include="resources\Gizmos\GenericVariable Icon.png" />
+    <Content Include="resources\Gizmos\IntEvent Icon.png" />
+    <Content Include="resources\Gizmos\IntEventListener Icon.png" />
+    <Content Include="resources\Gizmos\IntVariable Icon.png" />
+    <Content Include="resources\Gizmos\StringEvent Icon.png" />
+    <Content Include="resources\Gizmos\StringEventListener Icon.png" />
+    <Content Include="resources\Gizmos\StringVariable Icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)bin\Plugins\$(ProjectName)\$(ProjectName).dll"
+XCOPY /S /Y "$(SolutionDir)resources\*" "$(SolutionDir)bin\Plugins\$(ProjectName)\"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(SolutionDir)bin\Plugins\" RD /S /Q "$(SolutionDir)bin\Plugins\"
+if not exist "$(SolutionDir)bin\Plugins\" mkdir "$(SolutionDir)bin\Plugins\"
+if not exist "$(SolutionDir)bin\Plugins\$(SolutionName)\" mkdir "$(SolutionDir)bin\Plugins\$(SolutionName)\"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
