@@ -10,10 +10,12 @@ namespace EventVariableAssets
 
     public abstract class GenericVariable : ScriptableObject, IGenericVariable
     {
+        public abstract string Version { get; }
         public abstract object Value { get; set; }
-        public abstract object RuntimeValue { get; }//set; }
+        public abstract object RuntimeValue { get; }
         public bool HasChanged { get; set; }
 
+      
         public static GenericVariable GetAsType<T>(T baseType, GenericVariable obj) where T : Type
         {
             if      (baseType == typeof(float))     return (GenericVariable<float>)obj;
@@ -38,9 +40,19 @@ namespace EventVariableAssets.Generics
 {
     public class GenericVariable<T> : GenericVariable
     {
+        [HideInInspector][SerializeField] string m_version = String.Empty; //Set in constructor
         [HideInInspector][SerializeField] T m_value = default(T);
         [HideInInspector][SerializeField] T m_runtimeValue = default(T);
         [SerializeField] T m_resetValue = default(T);
+
+        public GenericVariable()
+        {
+            m_version = Globals.Version;
+        }
+
+        #region Properties
+        public override string Version { get => m_version; }
+
         public override object Value
         {
             get { return (Application.isPlaying) ? RuntimeValue : m_value; }
@@ -66,8 +78,9 @@ namespace EventVariableAssets.Generics
         {
             get { return m_runtimeValue; }
         }
+        #endregion
 
-		public static GenericVariable<T> GetAsType(GenericVariable obj)
+        public static GenericVariable<T> GetAsType(GenericVariable obj)
         {
             return (GenericVariable<T>)obj;
         }

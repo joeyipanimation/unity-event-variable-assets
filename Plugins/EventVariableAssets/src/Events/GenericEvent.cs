@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ namespace EventVariableAssets
     [CreateAssetMenu(fileName = "NewGenericEvent", menuName = "Events/GenericEvent")]
     public class GenericEvent : ScriptableObject
     {
+        [HideInInspector][SerializeField] string m_version = String.Empty; //Set in constructor
         internal List<GenericEventListenerBase> listeners = new List<GenericEventListenerBase>();
 
         bool m_traceCallStack = false;
@@ -28,6 +30,11 @@ namespace EventVariableAssets
         }
         public string CallStackStrings { get; set; }
         int CallStackCounter = 0;
+
+        public GenericEvent()
+        {
+            m_version = Globals.Version;
+        }
 
         public virtual void Raise()
         {

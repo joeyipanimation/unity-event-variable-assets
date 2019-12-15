@@ -5,7 +5,14 @@ namespace EventVariableAssets
 {
     public class GenericEventListenerBase : MonoBehaviour
     {
+        [HideInInspector][SerializeField] readonly string m_version = string.Empty; //Set in constructor
+        public string Version { get => m_version; }
         public GenericEvent Event;
+
+        public GenericEventListenerBase()
+        {
+            m_version = Globals.Version;
+        }
 
         void OnEnable()
         {
