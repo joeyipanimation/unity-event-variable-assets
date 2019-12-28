@@ -1,10 +1,17 @@
 # unity-event-variable-assets
 Assets-based events and variables ensures system/prefab integrity. This helps you create robust fully standalone prefabs & modules. Say goodbye to re-creating the scene in order to unit test a prefab!
 
+Based on the modular setup explained [here](https://unity3d.com/how-to/architect-with-scriptable-objects).
+
 # Author
 Created and distributed by Joe Yip (2018). Please direct comments, bugs, and requests to  joeyipanimation@gmail.com. 
 
 # Release Notes
+
+### Version 0.5
+
+* Serializing scriptable asset version, inspector display, and version upgrade button
+* Improved callstack view to show full stack and clear-stack button
 
 ### Version 0.4
 * Fixed string formatter null ref

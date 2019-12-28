@@ -68,6 +68,7 @@
     <Compile Include="src\Variables\StringVariable.cs" />
     <Compile Include="src\Variables\StringVariableReference.cs" />
     <Compile Include="src\Events\GenericEventData_StringFormat.cs" />
+    <Compile Include="src\Globals.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\EventVariableAssets.dll.meta" />

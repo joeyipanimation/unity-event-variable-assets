@@ -33,6 +33,8 @@ namespace EventVariableAssets
             else if (obj.GetType().Equals(typeof(BoolVariable)))    return typeof(bool);
             else return null;
         }
+
+        public abstract bool UpgradeAsset();
     }
 }
 
@@ -94,6 +96,23 @@ namespace EventVariableAssets.Generics
             catch
             {
             }
+        }
+
+        public override bool UpgradeAsset()
+        {
+            if (m_version.Equals("0.0"))
+            {
+                m_version = "0.5";
+                UpgradeAsset();
+                return true;
+            }
+            else if (m_version.Equals("0.5"))
+            {
+                //Most up-to-date
+                return false;
+            }
+
+            return false;
         }
     }
 }
